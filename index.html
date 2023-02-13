@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+
+        <form name="myForm" >
+
+            <p class="heading">HTML, CSS & Javascript Form</p>
+            <div class="name">
+              <label for="fname">First Name</label>
+              <input class="field" type="text" id="fname" placeholder="First Name" />
+              <label for="lname">Last Name</label>
+              <input class="field" type="text" id="lname" placeholder="Last Name" />
+            </div>
+            <div class="email">
+                <label for="email">Email</label><br>
+              <input class="field mtop" type="text" id="email" placeholder="Email Address" />
+            </div>
+      
+            <div class="accountnumber">
+                <label for="actnum">Acount Number</label><br>
+              <input class="field mtop" type="number" id="actnum" placeholder="Account Number" />
+            </div>
+      
+            <div class="bankname">
+              <label for="bname">Bank Name</label><br>
+              <input class="field mtop" type="text" id="bname" placeholder="Bank Name" />
+            </div>
+      
+            <div class="amount">
+                <label for="amt">Amount</label><br>
+              <input class="field mtop" type="number" id="amt"  placeholder="Amount" />
+            </div>
+      
+            <button class="btn" type="submit"  id="submit">Submit</button>
+            <button class="btnreset btn" type="reset" id="resett">Reset</button>
+        </form>
+     
+    </div>
+
+
+    <div class="detail">
+      <h1>
+        Details
+      </h1>
+      <h2 id="fnameRef">
+      </h2>
+    </h1>
+    <h2 id="lnameRef">
+    </h2>
+    <h2 id="emailRef">
+    </h2>
+    <h2 id="accountRef">
+    </h2>
+    <h2 id="bankRef">
+    </h2>
+    <h2 id="amtRef">
+    </h2>
+    </div>
+
+    <script>
+      document.getElementById('submit').addEventListener('click', function() {
+        event.preventDefault()
+       validateForm()
+        var fnameInput = document.getElementById("fname").value; 
+            console.log(fnameInput);
+            document.getElementById("fnameRef").innerText = fnameInput
+
+            var fnameInput = document.getElementById("lname").value; 
+            console.log(fnameInput);
+            document.getElementById("lnameRef").innerText = fnameInput
+
+            var fnameInput = document.getElementById("email").value; 
+            console.log(fnameInput);
+            document.getElementById("emailRef").innerText = fnameInput
+
+            var fnameInput = document.getElementById("actnum").value; 
+            console.log(fnameInput);
+            document.getElementById("accountRef").innerText = fnameInput
+
+            var fnameInput = document.getElementById("bname").value; 
+            console.log(fnameInput);
+            document.getElementById("bankRef").innerText = fnameInput
+
+            var fnameInput = document.getElementById("amt").value; 
+            console.log(fnameInput);
+            document.getElementById("amtRef").innerText = fnameInput
+        })
+      function validateForm() {
+        let fname = document.forms["myForm"]["fname"].value;
+        let lname = document.forms["myForm"]["lname"].value;
+        let email = document.forms["myForm"]["email"].value;
+        let actnum = document.forms["myForm"]["actnum"].value;
+        let bname = document.forms["myForm"]["bname"].value;
+        let amt = document.forms["myForm"]["amt"].value;
+        if (fname == "") {
+          alert("First Name must be filled out");
+          return false;
+        }
+        else if (lname =="") {
+            alert("Last Name Must Be Filled Out")
+            return false;
+        }
+        else if (email =="") {
+            alert("Email Must Be Filled Out")
+            return false;
+        }
+        else if (actnum =="") {
+            alert("Account Number Be Filled Out")
+            return false;
+        }
+        
+        else if (bname =="") {
+            alert("Bank Name Must Be Filled Out")
+            return false;
+        }
+        else if (amt =="") {
+            alert("Amount Must Be Filled Out")
+            return false;
+        }
+      }
+        // .................................................................................................................
+
+   
+
+        
+
+      
+      
+    </script>
+  </body>
+</html>
